@@ -1,4 +1,4 @@
-class Cinema:
+class Cineminha:
     def __init__(self, filas=5, colunas=10):
         self.filas = filas
         self.colunas = colunas
@@ -20,15 +20,14 @@ class Cinema:
         else:
             print("Posição inválida! Escolha um assento dentro do limite.")
 
-
 def main():
-    cinema = Cinema()
+    cineminha = Cineminha()
     while True:
-        cinema.exibir_assentos()
+        cineminha.exibir_assentos()
         try:
             fila = int(input("Informe o número da fila: "))
             coluna = int(input("Informe o número da coluna: "))
-            cinema.reservar_assento(fila, coluna)
+            cineminha.reservar_assento(fila, coluna)
         except ValueError:
             print("Entrada inválida! Digite números válidos.")
         continuar = input("Deseja reservar outro assento? (s/n): ").strip().lower()
@@ -37,3 +36,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
